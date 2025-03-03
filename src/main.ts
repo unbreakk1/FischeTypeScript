@@ -51,28 +51,28 @@ if (!isAdmin)
     console.log('isAdmin is false.')
 
 // print a Christmas Tree in March??!
-const n = 20;
+const n = 100;
 printChristmasTree(n);
 
-function printChristmasTree(n: number): void
-{
-    // upper part of tree
-    for (let i = 1; i <= n; i++)
-    {
-        const spaces = ' '.repeat(n - i);
-        const stars = '*'.repeat(2 * i - 1);
-        console.log(spaces + stars);
-    }
-
-    // trunk
-    for (let i = 1; i <= n; i++)
-    {
-        const spaces = ' '.repeat(n - 1);
-        console.log(spaces + '*');
-    }
-}
-
 //function printChristmasTree(n: number): void
+//{
+//    // upper part of tree
+//    for (let i = 1; i <= n; i++)
+//    {
+//        const spaces = ' '.repeat(n - i);
+//        const stars = '*'.repeat(2 * i - 1);
+//        console.log(spaces + stars);
+//    }
+//
+//    // trunk
+//    for (let i = 1; i <= n; i++)
+//    {
+//        const spaces = ' '.repeat(n - 1);
+//        console.log(spaces + '*');
+//    }
+//}
+
+function printChristmasTree(n: number): void
 {
     const SPACE_CHAR = ' '
     const STAR_CHAR = '*'
@@ -99,6 +99,7 @@ function printChristmasTree(n: number): void
         printTrunkLayer(n - 1)
 
 }
+
 
 
 

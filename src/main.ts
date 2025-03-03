@@ -72,5 +72,35 @@ function printChristmasTree(n: number): void
     }
 }
 
+//function printChristmasTree(n: number): void
+{
+    const SPACE_CHAR = ' '
+    const STAR_CHAR = '*'
+
+    const printTreeLayer = (spaces: number, stars: number): void =>
+    {
+        const spaceText = SPACE_CHAR.repeat(spaces)
+        const starText = STAR_CHAR.repeat(stars)
+        console.log(spaceText + starText)
+    }
+
+    const printTrunkLayer = (spaces: number): void =>
+    {
+        const spaceText = SPACE_CHAR.repeat(spaces)
+        console.log(spaceText + STAR_CHAR)
+    }
+
+    // Print tree
+    for (let i = 1; i <= n; i++)
+        printTreeLayer(n - i, 2 * i - 1)
+
+    // Print trunk
+    for (let i = 1; i <= n; i++)
+        printTrunkLayer(n - 1)
+
+}
+
+
+
 
 
